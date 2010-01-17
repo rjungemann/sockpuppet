@@ -1,0 +1,15 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #1E171C;
+}
+#flashcontent {
+  margin: 5px auto;
+  width: 640px;
+  height: 400px;
+  padding: 0;
+  border: 2px solid #576255;
+}

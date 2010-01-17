@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title><%= $project_name %></title>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="scripts/swfobject.js"></script>
+  </head>
+
+  <body>
+    <div id="flashcontent"></div> 
+
+    <script type="text/javascript">
+      var so = new SWFObject("<%= $project_name %>.swf", "<%= $project_name %>", "640", "400", "10", "#1E171C");
+      so.addParam("allowScriptAccess", "always");
+      so.addVariable("sockpuppetServer", "<%= $sockpuppet_server %>");
+      so.addVariable("sockpuppetPort", <%= $sockpuppet_port %>)
+      so.write("flashcontent");
+    </script>
+  </body>
+</html>
